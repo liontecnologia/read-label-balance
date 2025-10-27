@@ -29,6 +29,18 @@ composer install
 composer test
 ```
 
+## Códigos de balanças do mercado
+
+- 2CCCC0TTTTTTDV
+- 2CCCC00PPPPPDV
+- 2CCCC00QQQQQDV
+- 2CCCCCTTTTTTDV
+- 2CCCCC0PPPPPDV
+- 2CCCCC0QQQQQDV
+- 2CCCCCCPPPPPDV
+- 2CCCCCCQQQQQDV
+- 2CCCCCCTTTTTDV
+
 ## Exemplo de Uso
 
 ```php
@@ -40,19 +52,7 @@ use ReadLabelBalance\InStore;
 // Codificação: 7 dígitos do código (C), 5 do peso em gramas (P), 1 filler (X)
 
 $instore = new InStore();
-$instore->setCodificacao('CCCCCCCPPPPPX');
-
-// Callback que retorna preço por kg
-$instore->setOnGetPrecoUnitario(function (string $codigo): float {
-    return $codigo === '1234567' ? 19.90 : 0.0;
-});
-
-$codigo = '1234567';
-$pesoG  = '00150'; // 150g
-$base12 = $codigo . $pesoG;        // 12 dígitos
-$dv     = $instore->calcEan13DV($base12);
-$ean13  = $base12 . $dv;           // 13 dígitos
-
+$instore->setCodificacao('2CCCC0TTTTTTDV');
 $instore->desmembrar($ean13);
 
 echo 'Código: ' . $instore->getCodigo() . PHP_EOL;
@@ -70,19 +70,6 @@ echo 'DV: ' . $instore->getDV() . PHP_EOL;
 - O 13º dígito do EAN é o DV (validado automaticamente).
 
 Exemplo de codificação sem total: `CCCCCCCPPPPPX` (7 C, 5 P, 1 X filler). 7+5+1 = 13, o filler garante que peso não consuma o último dígito (DV).
-
-## Códigos de balanças do mnercado
-
-- 2CCCC0TTTTTTDV
-- 2CCCC00PPPPPDV
-- 2CCCC00QQQQQDV
-- 2CCCCCTTTTTTDV
-- 2CCCCC0PPPPPDV
-- 2CCCCC0QQQQQDV
-- 2CCCCCCPPPPPDV
-- 2CCCCCCQQQQQDV
-- 2CCCCCCTTTTTDV
-
 
 ## Estrutura do Projeto
 
