@@ -1,5 +1,5 @@
 {
-  "name": "readlabelbalance/read-label-balance",
+  "name": "liontecnologia/read-label-balance",
   "description": "Biblioteca PHP para leitura de etiquetas de balança (EAN-13) com padrão de codificação (C/P/T), inspirada no ACBrInStore.",
   "type": "library",
   "license": "MIT",
