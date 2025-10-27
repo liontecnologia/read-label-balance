@@ -46,12 +46,13 @@ final class InStoreTest extends TestCase
     public function testDesmembrarComTotalSemCallback(): void
     {
         $instore = new InStore();
-        $instore->setCodificacao('CCCCCCCTTTTX'); // 7 código, 4 total, 1 filler
+        $instore->setCodificacao('CCCCCCCTTTTXX'); // 7 código, 4 total, 2 filler (13 chars)
         // sem callback
 
         $codigo = '7654321'; // 7 dígitos
-        $totalC = '01234';   // 1234 centavos => R$ 12,34 (usa 4 dígitos)
-        $base12 = $codigo . substr($totalC, 0, 4); // 12 dígitos
+        $totalC = '1234';    // 1234 centavos => R$ 12,34 (4 dígitos)
+        $filler = '0';       // 1 dígito de preenchimento
+        $base12 = $codigo . $totalC . $filler; // 12 dígitos
         $dv     = $this->dv($base12);
         $ean13  = $base12 . $dv;
 

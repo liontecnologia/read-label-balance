@@ -11,7 +11,6 @@
 
 Biblioteca PHP open source para leitura de etiquetas de balança (EAN‑13) utilizando um padrão de codificação simples (C/P/T) para extrair código do produto, peso e total. Inspirada na lógica do componente **ACBrInStore**.
 
-Esta biblioteca está pronta para instalação via Composer, inclui testes com PHPUnit e documentação para publicação no GitHub e Packagist.
 
 ## Instalação
 
