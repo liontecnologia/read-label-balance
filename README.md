@@ -95,37 +95,6 @@ Executa os testes com PHPUnit:
 composer test
 ```
 
-## Publicando no GitHub e Packagist
-
-1. GitHub
-   - Crie um repositório: `read-label-balance` em sua conta.
-   - Configure o `composer.json` com `homepage` e `support` apontando para seu repositório.
-   - Faça o push inicial:
-     ```
-     git init
-     git add .
-     git commit -m "feat: release inicial da biblioteca"
-     git branch -M main
-     git remote add origin https://github.com/seu-usuario/read-label-balance.git
-     git push -u origin main
-     ```
-
-2. Criar tag de versão (exemplo 1.0.0)
-   ```
-   git tag -a v1.0.0 -m "Primeiro release estável"
-   git push origin v1.0.0
-   ```
-
-3. Packagist
-   - Acesse https://packagist.org e faça login com sua conta.
-   - Clique em "Submit" e informe a URL do repositório GitHub.
-   - Verifique se o `composer.json` está válido (nome, descrição, autoload PSR-4, licença, etc.).
-   - Após aprovado, instalar com `composer require seu-usuario/read-label-balance:^1.0`.
-
-4. Atualizações
-   - Sempre que criar uma nova versão, crie uma nova tag (`v1.1.0`, `v1.2.0`, etc.).
-   - O Packagist detecta automaticamente novas tags via webhook do GitHub.
-
 ## Licença
 
 Distribuído sob a licença MIT. Consulte o arquivo `LICENSE` para mais detalhes.
