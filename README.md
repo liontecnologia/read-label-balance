@@ -38,6 +38,7 @@ require __DIR__ . '/vendor/autoload.php';
 use ReadLabelBalance\InStore;
 
 // Codificação: 7 dígitos do código (C), 5 do peso em gramas (P), 1 filler (X)
+
 $instore = new InStore();
 $instore->setCodificacao('CCCCCCCPPPPPX');
 
@@ -69,6 +70,19 @@ echo 'DV: ' . $instore->getDV() . PHP_EOL;
 - O 13º dígito do EAN é o DV (validado automaticamente).
 
 Exemplo de codificação sem total: `CCCCCCCPPPPPX` (7 C, 5 P, 1 X filler). 7+5+1 = 13, o filler garante que peso não consuma o último dígito (DV).
+
+## Códigos de balanças do mnercado
+
+- 2CCCC0TTTTTTDV
+- 2CCCC00PPPPPDV
+- 2CCCC00QQQQQDV
+- 2CCCCCTTTTTTDV
+- 2CCCCC0PPPPPDV
+- 2CCCCC0QQQQQDV
+- 2CCCCCCPPPPPDV
+- 2CCCCCCQQQQQDV
+- 2CCCCCCTTTTTDV
+
 
 ## Estrutura do Projeto
 
