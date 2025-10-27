@@ -1,0 +1,38 @@
+{
+  "name": "readlabelbalance/read-label-balance",
+  "description": "Biblioteca PHP para leitura de etiquetas de balança (EAN-13) com padrão de codificação (C/P/T), inspirada no ACBrInStore.",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Joabe Anderson da Silva",
+      "email": "joabe@liontecnologia.com.br"
+    }
+  ],
+  "require": {
+    "php": ">=7.4"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9.6"
+  },
+  "autoload": {
+    "psr-4": {
+      "ReadLabelBalance\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "ReadLabelBalance\\Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "test": "phpunit"
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true,
+  "homepage": "https://github.com/seu-usuario/read-label-balance",
+  "support": {
+    "issues": "https://github.com/seu-usuario/read-label-balance/issues",
+    "source": "https://github.com/seu-usuario/read-label-balance"
+  }
+}
