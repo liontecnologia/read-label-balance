@@ -30,9 +30,9 @@
   },
   "minimum-stability": "stable",
   "prefer-stable": true,
-  "homepage": "https://github.com/seu-usuario/read-label-balance",
+  "homepage": "https://github.com/liontecnologia/read-label-balance",
   "support": {
-    "issues": "https://github.com/seu-usuario/read-label-balance/issues",
-    "source": "https://github.com/seu-usuario/read-label-balance"
+    "issues": "https://github.com/liontecnologia/read-label-balance/issues",
+    "source": "https://github.com/liontecnologia/read-label-balance"
   }
 }
